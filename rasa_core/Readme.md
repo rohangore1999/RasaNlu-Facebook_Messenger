@@ -9,10 +9,10 @@
     3. We can talk with our bot through command line just to check whether it is working or not.
        - python -m rasa_core.run --auth_token rasabot -d models\dialogue -u models\current\nlu -o out.log --endpoints endpoints.yml --enable_api
     
-    * Note: It is updated comment compare to rasa docs. *
+      *Note: It is updated comment compare to rasa docs.*
      
     4. To connect on Facebook
        - python -m rasa_core.run -d models/dialogue -u models/current/nlu --port 5002 --credentials credentials.yml --endpoints endpoints.yml  --enable_api --debug
      
-     * Note: It is updated comment compare to rasa docs. * 
+     *Note: It is updated comment compare to rasa docs.* 
      
