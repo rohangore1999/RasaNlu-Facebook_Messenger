@@ -39,4 +39,4 @@
         - Click on Webhooks in Product section (I am assuming that you have created your webhook and page on Facebook).
       *Your can refer rasa documentation to create your webhook and Page https://rasa.com/docs/core/connectors/*
         
-        ![image](https://user-images.githubusercontent.com/39983195/56089916-f55c3e00-5eb7-11e9-99aa-7424b4f03560.png)
+     ![image](https://user-images.githubusercontent.com/39983195/56089916-f55c3e00-5eb7-11e9-99aa-7424b4f03560.png)
