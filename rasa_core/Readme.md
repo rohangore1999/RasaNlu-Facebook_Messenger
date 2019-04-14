@@ -27,4 +27,11 @@
       
       ngrok http 5002
       
-     
+     ![image](https://user-images.githubusercontent.com/39983195/56089697-71548700-5eb4-11e9-9846-451dfd7b7643.png)
+      
+     6. Run **actions** file in new command line.
+    
+      python -m rasa_core_sdk.endpoint --actions actions
+    
+     ![image](https://user-images.githubusercontent.com/39983195/56089856-18d2b900-5eb7-11e9-9cba-344d445405bb.png)
+
