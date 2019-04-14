@@ -37,6 +37,15 @@
     
      7. Open developer of Facebook https://developers.facebook.com/
         - Click on Webhooks in Product section (I am assuming that you have created your webhook and page on Facebook).
-      *Your can refer rasa documentation to create your webhook and Page https://rasa.com/docs/core/connectors/*
+      
+        *Your can refer rasa documentation to create your webhook and Page https://rasa.com/docs/core/connectors/*
         
      ![image](https://user-images.githubusercontent.com/39983195/56089916-f55c3e00-5eb7-11e9-99aa-7424b4f03560.png)
+     
+     8. Then click on "Edit Subscription"
+     
+     ![image](https://user-images.githubusercontent.com/39983195/56090163-c6e06200-5ebb-11e9-85f5-917b7d311db9.png)
+
+     9. Fill the "Callback URL" by copying the port provide by ngrok and fill the "Verify Token" from your credential file.
+     
+     ![image](https://user-images.githubusercontent.com/39983195/56090203-a5cc4100-5ebc-11e9-83bc-a184b7d17241.png)
