@@ -56,8 +56,8 @@
      
  
 <p align="center">  
-  <br<
-  <b>This is how it will look</b><br>
+  <br>
+  <b>Our chatbot is ready!!</b><br>
    <br>
   <img src="https://user-images.githubusercontent.com/39983195/56090510-95b66080-5ec0-11e9-996c-3edf29ee8865.gif">
 </p>
