@@ -1,0 +1,283 @@
+Microsoft Windows [Version 10.0.17134.648]
+(c) 2018 Microsoft Corporation. All rights reserved.
+
+C:\Users\Rohan Gore\Documents\Chatbot\rasabot\Scripts>activate
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\rasabot\Scripts>cd ..
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\rasabot>cd ..
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot>cd Weather2
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_core_sdk.endpoint --actions actions
+2019-04-12 00:56:43 INFO     __main__  - Starting action endpoint server...
+2019-04-12 00:56:43 INFO     rasa_core_sdk.executor  - Registered function for 'action_weather'.
+2019-04-12 00:56:45 INFO     __main__  - Action endpoint is up and running. on ('0.0.0.0', 5055)
+[2019-04-12 01:12:10,236] ERROR in app: Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 86, in webhook
+    response = executor.run(action_call)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\executor.py", line 177, in run
+    events = action(dispatcher, tracker, domain)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\Weather2\actions.py", line 16, in run
+    from apixu.client import ApixuClient
+ModuleNotFoundError: No module named 'apixu'
+2019-04-12 01:12:10 ERROR    flask.app  - Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 86, in webhook
+    response = executor.run(action_call)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\executor.py", line 177, in run
+    events = action(dispatcher, tracker, domain)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\Weather2\actions.py", line 16, in run
+    from apixu.client import ApixuClient
+ModuleNotFoundError: No module named 'apixu'
+127.0.0.1 - - [2019-04-12 01:28:31] "POST /webhook HTTP/1.1" 500 - 981.103751
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\gevent\_ffi\loop.py", line 234, in python_check_callback
+    def python_check_callback(self, watcher_ptr): # pylint:disable=unused-argument
+KeyboardInterrupt
+2019-04-11T19:58:43Z
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 119, in <module>
+    http_server.serve_forever()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\gevent\baseserver.py", line 369, in serve_forever
+    self._stop_event.wait()
+  File "src\gevent\event.py", line 127, in gevent._event.Event.wait
+  File "src\gevent\_abstract_linkable.py", line 192, in gevent.__abstract_linkable.AbstractLinkable._wait
+  File "src\gevent\_abstract_linkable.py", line 165, in gevent.__abstract_linkable.AbstractLinkable._wait_core
+  File "src\gevent\_abstract_linkable.py", line 169, in gevent.__abstract_linkable.AbstractLinkable._wait_core
+  File "src\gevent\_greenlet_primitives.py", line 60, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\_greenlet_primitives.py", line 60, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\_greenlet_primitives.py", line 64, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\__greenlet_primitives.pxd", line 35, in gevent.__greenlet_primitives._greenlet_switch
+KeyboardInterrupt
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>pip install WeatherAPIXU
+Collecting WeatherAPIXU
+  Downloading https://files.pythonhosted.org/packages/3c/5d/524199413a4a6b619ae7ac1af21131f993db71385b78471b52622aaa923a/WeatherAPIXU-0.0.2.tar.gz
+Requirement already satisfied: requests in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from WeatherAPIXU)
+Requirement already satisfied: urllib3<1.25,>=1.21.1 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests->WeatherAPIXU)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests->WeatherAPIXU)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests->WeatherAPIXU)
+Requirement already satisfied: idna<2.9,>=2.5 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests->WeatherAPIXU)
+Building wheels for collected packages: WeatherAPIXU
+  Running setup.py bdist_wheel for WeatherAPIXU ... done
+  Stored in directory: C:\Users\Rohan Gore\AppData\Local\pip\Cache\wheels\62\67\bc\97e1f90625470718d9144c3d179fd4b1bb7f4b20a6762a989b
+Successfully built WeatherAPIXU
+Installing collected packages: WeatherAPIXU
+Successfully installed WeatherAPIXU-0.0.2
+You are using pip version 9.0.1, however version 19.0.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_core_sdk.endpoint --actions actions
+2019-04-12 01:30:51 INFO     __main__  - Starting action endpoint server...
+2019-04-12 01:30:51 INFO     rasa_core_sdk.executor  - Registered function for 'action_weather'.
+2019-04-12 01:30:51 INFO     __main__  - Action endpoint is up and running. on ('0.0.0.0', 5055)
+[2019-04-12 01:35:40,029] ERROR in app: Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 86, in webhook
+    response = executor.run(action_call)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\executor.py", line 177, in run
+    events = action(dispatcher, tracker, domain)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\Weather2\actions.py", line 16, in run
+    from apixu.client import ApixuClient
+ModuleNotFoundError: No module named 'apixu'
+2019-04-12 01:35:40 ERROR    flask.app  - Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 86, in webhook
+    response = executor.run(action_call)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\executor.py", line 177, in run
+    events = action(dispatcher, tracker, domain)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\Weather2\actions.py", line 16, in run
+    from apixu.client import ApixuClient
+ModuleNotFoundError: No module named 'apixu'
+127.0.0.1 - - [2019-04-12 01:35:40] "POST /webhook HTTP/1.1" 500 411 0.078663
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\gevent\_ffi\loop.py", line 234, in python_check_callback
+    def python_check_callback(self, watcher_ptr): # pylint:disable=unused-argument
+KeyboardInterrupt
+2019-04-11T20:15:56Z
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 119, in <module>
+    http_server.serve_forever()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\gevent\baseserver.py", line 369, in serve_forever
+    self._stop_event.wait()
+  File "src\gevent\event.py", line 127, in gevent._event.Event.wait
+  File "src\gevent\_abstract_linkable.py", line 192, in gevent.__abstract_linkable.AbstractLinkable._wait
+  File "src\gevent\_abstract_linkable.py", line 165, in gevent.__abstract_linkable.AbstractLinkable._wait_core
+  File "src\gevent\_abstract_linkable.py", line 169, in gevent.__abstract_linkable.AbstractLinkable._wait_core
+  File "src\gevent\_greenlet_primitives.py", line 60, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\_greenlet_primitives.py", line 60, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\_greenlet_primitives.py", line 64, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\__greenlet_primitives.pxd", line 35, in gevent.__greenlet_primitives._greenlet_switch
+KeyboardInterrupt
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>pip install git+https://github.com/apixu/apixu-python.git
+Collecting git+https://github.com/apixu/apixu-python.git
+  Cloning https://github.com/apixu/apixu-python.git to c:\users\rohang~1\appdata\local\temp\pip-4afa6iro-build
+Requirement already satisfied: requests==2.21 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from apixu==0.2.0)
+Requirement already satisfied: urllib3<1.25,>=1.21.1 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests==2.21->apixu==0.2.0)
+Requirement already satisfied: chardet<3.1.0,>=3.0.2 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests==2.21->apixu==0.2.0)
+Requirement already satisfied: idna<2.9,>=2.5 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests==2.21->apixu==0.2.0)
+Requirement already satisfied: certifi>=2017.4.17 in c:\users\rohan gore\documents\chatbot\rasabot\lib\site-packages (from requests==2.21->apixu==0.2.0)
+Installing collected packages: apixu
+  Running setup.py install for apixu ... done
+Successfully installed apixu-0.2.0
+You are using pip version 9.0.1, however version 19.0.3 is available.
+You should consider upgrading via the 'python -m pip install --upgrade pip' command.
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_core_sdk.endpoint --actions actions
+2019-04-12 01:51:54 INFO     __main__  - Starting action endpoint server...
+2019-04-12 01:51:54 INFO     rasa_core_sdk.executor  - Registered function for 'action_weather'.
+2019-04-12 01:51:54 INFO     __main__  - Action endpoint is up and running. on ('0.0.0.0', 5055)
+[2019-04-12 01:55:08,741] ERROR in app: Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 86, in webhook
+    response = executor.run(action_call)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\executor.py", line 177, in run
+    events = action(dispatcher, tracker, domain)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\Weather2\actions.py", line 21, in run
+    current = client.getCurrentWeather(q=loc)
+AttributeError: 'ApixuClient' object has no attribute 'getCurrentWeather'
+2019-04-12 01:55:08 ERROR    flask.app  - Exception on /webhook [POST]
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 2292, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1815, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\extension.py", line 161, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1718, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\_compat.py", line 35, in reraise
+    raise value
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask\app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\flask_cors\decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 86, in webhook
+    response = executor.run(action_call)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\executor.py", line 177, in run
+    events = action(dispatcher, tracker, domain)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\Weather2\actions.py", line 21, in run
+    current = client.getCurrentWeather(q=loc)
+AttributeError: 'ApixuClient' object has no attribute 'getCurrentWeather'
+127.0.0.1 - - [2019-04-12 01:55:08] "POST /webhook HTTP/1.1" 500 411 0.241940
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\gevent\_ffi\loop.py", line 234, in python_check_callback
+    def python_check_callback(self, watcher_ptr): # pylint:disable=unused-argument
+KeyboardInterrupt
+2019-04-11T20:37:35Z
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_core_sdk\endpoint.py", line 119, in <module>
+    http_server.serve_forever()
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\gevent\baseserver.py", line 369, in serve_forever
+    self._stop_event.wait()
+  File "src\gevent\event.py", line 127, in gevent._event.Event.wait
+  File "src\gevent\_abstract_linkable.py", line 192, in gevent.__abstract_linkable.AbstractLinkable._wait
+  File "src\gevent\_abstract_linkable.py", line 165, in gevent.__abstract_linkable.AbstractLinkable._wait_core
+  File "src\gevent\_abstract_linkable.py", line 169, in gevent.__abstract_linkable.AbstractLinkable._wait_core
+  File "src\gevent\_greenlet_primitives.py", line 60, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\_greenlet_primitives.py", line 60, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\_greenlet_primitives.py", line 64, in gevent.__greenlet_primitives.SwitchOutGreenletWithLoop.switch
+  File "src\gevent\__greenlet_primitives.pxd", line 35, in gevent.__greenlet_primitives._greenlet_switch
+KeyboardInterrupt
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_core_sdk.endpoint --actions actions
+2019-04-12 02:07:39 INFO     __main__  - Starting action endpoint server...
+2019-04-12 02:07:39 INFO     rasa_core_sdk.executor  - Registered function for 'action_weather'.
+2019-04-12 02:07:39 INFO     __main__  - Action endpoint is up and running. on ('0.0.0.0', 5055)
+127.0.0.1 - - [2019-04-12 02:12:49] "POST /webhook HTTP/1.1" 200 379 1.719246

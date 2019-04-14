@@ -1,0 +1,273 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "intent": "greet",
+        "text": "hey"
+      },
+      {
+        "intent": "greet",
+        "text": "hello"
+      },
+      {
+        "intent": "greet",
+        "text": "hi"
+      },
+      {
+        "intent": "greet",
+        "text": "good morning"
+      },
+      {
+        "intent": "greet",
+        "text": "good evening"
+      },
+      {
+        "intent": "greet",
+        "text": "hey there"
+      },
+      {
+        "intent": "goodbye",
+        "text": "bye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "goodbye"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you around"
+      },
+      {
+        "intent": "goodbye",
+        "text": "see you later"
+      },
+      {
+        "intent": "mood_affirm",
+        "text": "yes"
+      },
+      {
+        "intent": "mood_affirm",
+        "text": "indeed"
+      },
+      {
+        "intent": "mood_affirm",
+        "text": "of course"
+      },
+      {
+        "intent": "mood_affirm",
+        "text": "that sounds good"
+      },
+      {
+        "intent": "mood_affirm",
+        "text": "correct"
+      },
+      {
+        "intent": "mood_deny",
+        "text": "no"
+      },
+      {
+        "intent": "mood_deny",
+        "text": "never"
+      },
+      {
+        "intent": "mood_deny",
+        "text": "I don't think so"
+      },
+      {
+        "intent": "mood_deny",
+        "text": "don't like that"
+      },
+      {
+        "intent": "mood_deny",
+        "text": "no way"
+      },
+      {
+        "intent": "mood_deny",
+        "text": "not really"
+      },
+      {
+        "intent": "mood_great",
+        "text": "perfect"
+      },
+      {
+        "intent": "mood_great",
+        "text": "very good"
+      },
+      {
+        "intent": "mood_great",
+        "text": "great"
+      },
+      {
+        "intent": "mood_great",
+        "text": "amazing"
+      },
+      {
+        "intent": "mood_great",
+        "text": "wonderful"
+      },
+      {
+        "intent": "mood_great",
+        "text": "I am feeling very good"
+      },
+      {
+        "intent": "mood_great",
+        "text": "I am great"
+      },
+      {
+        "intent": "mood_great",
+        "text": "I'm good"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "sad"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "very sad"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "unhappy"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "bad"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "very bad"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "awful"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "terrible"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "not very good"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "extremely sad"
+      },
+      {
+        "intent": "mood_unhappy",
+        "text": "so sad"
+      },
+      {
+        "intent": "gains",
+        "text": "gains"
+      },
+      {
+        "intent": "gains",
+        "text": "gain weight"
+      },
+      {
+        "intent": "lose",
+        "text": "lose"
+      },
+      {
+        "intent": "lose",
+        "text": "lose fat"
+      },
+      {
+        "intent": "lose",
+        "text": "lose weight"
+      },
+      {
+        "intent": "inform",
+        "text": "What's the weather today?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 22,
+            "end": 28,
+            "value": "London",
+            "entity": "location"
+          }
+        ],
+        "text": "What's the weather in London today?"
+      },
+      {
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 22,
+            "end": 27,
+            "value": "Italy",
+            "entity": "location"
+          }
+        ],
+        "text": "What's the weather in Italy today?"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "Rohan",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "I am Rohan"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 5,
+            "end": 10,
+            "value": "Abhay",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "I am Abhay"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 4,
+            "end": 11,
+            "value": "Vignesh",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "I'm Vignesh"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 3,
+            "end": 11,
+            "value": "Shailesh",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "im Shailesh"
+      },
+      {
+        "intent": "my_name_is",
+        "entities": [
+          {
+            "start": 11,
+            "end": 23,
+            "value": "Martin Novak",
+            "entity": "PERSON"
+          }
+        ],
+        "text": "My name is Martin Novak"
+      }
+    ],
+    "regex_features": [],
+    "lookup_tables": [],
+    "entity_synonyms": []
+  }
+}

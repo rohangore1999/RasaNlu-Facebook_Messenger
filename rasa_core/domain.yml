@@ -1,0 +1,81 @@
+slots:
+  location:
+    type: text
+
+  PERSON:
+    type: text
+
+intents:
+  - greet
+  - goodbye
+  - mood_affirm
+  - mood_deny
+  - mood_great
+  - mood_unhappy
+  - gain
+  - lose
+  - greet
+  - goodbye
+  - inform
+  - my_name_is
+
+entities:
+  - location
+
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_gains
+- utter_gains_up
+- utter_lose
+- utter_lose_up
+- utter_ask_location
+- action_weather
+- utter_its_nice_to_meet_you
+
+
+templates:
+  utter_greet:
+  - text: "Hey!What's your name?"
+    
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_gains:
+    - text: "- Priorities 1.Strength Train 2.Nutrition(Eat surplus calories) 3.Rest"
+
+  utter_lose:
+    - text: "- Priorities 1.Nutrition(Eat less calories) 2.Strength Train 3.Cardio"
+
+  utter_gains_up:
+  - text: "Yeah buddy"
+    image: "https://cdn2-thevladarcompany.netdna-ssl.com/wp-content/uploads/2017/12/kai-greene-back-and-traps-header-1068x566.jpg"
+
+  utter_lose_up:
+  - text: "Comn brahh"
+    image: "https://yt3.ggpht.com/a-/AAuE7mCZLbzOC1VvzsHJdN0WpJNixtA2eV_oJhdQuw=s900-mo-c-c0xffffffff-rj-k-no"
+
+  utter_ask_location:
+    - 'In what location?.'
+
+  utter_its_nice_to_meet_you:
+    - text: 'Whats your goal, {PERSON}'
+      buttons:
+      - title: "gains"
+        payload: "gains"
+      - title: "lose"
+        payload: "lose"

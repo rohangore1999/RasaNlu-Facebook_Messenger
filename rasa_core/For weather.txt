@@ -1,0 +1,91 @@
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
+Traceback (most recent call last):
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 193, in _run_module_as_main
+    "__main__", mod_spec)
+  File "C:\Users\Rohan Gore\Anaconda3\lib\runpy.py", line 85, in _run_code
+    exec(code, run_globals)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_nlu\train.py", line 177, in <module>
+    do_train(config.load(cmdline_args.config),
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_nlu\config.py", line 44, in load
+    file_config = utils.read_yaml_file(filename)
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_nlu\utils\__init__.py", line 283, in read_yaml_file
+    return read_yaml(read_file(filename, "utf-8"))
+  File "C:\Users\Rohan Gore\Documents\Chatbot\rasabot\lib\site-packages\rasa_nlu\utils\__init__.py", line 206, in read_file
+    with io.open(filename, encoding=encoding) as f:
+FileNotFoundError: [Errno 2] No such file or directory: 'nlu_config.yml'
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_nlu.train -c nlu-config.yml --data nlu-data.md -o models --fixed_model_name nlu --project current --verbose
+2019-04-12 02:09:59 INFO     rasa_nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2019-04-12 02:10:28 INFO     rasa_nlu.components  - Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2019-04-12 02:10:29 INFO     rasa_nlu.training_data.loading  - Training data format of nlu-data.md is md
+2019-04-12 02:10:29 INFO     rasa_nlu.training_data.training_data  - Training data stats:
+        - intent examples: 9 (3 distinct intents)
+        - Found intents: 'goodbye', 'inform', 'greet'
+        - entity examples: 2 (1 distinct entities)
+        - found entities: 'location'
+
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component nlp_spacy
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component tokenizer_spacy
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component intent_entity_featurizer_regex
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component intent_featurizer_spacy
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component ner_crf
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component ner_spacy
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component ner_synonyms
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Starting to train component intent_classifier_sklearn
+Fitting 2 folds for each of 6 candidates, totalling 12 fits
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:    0.0s finished
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:10:29 INFO     rasa_nlu.model  - Successfully saved model into 'C:\Users\Rohan Gore\Documents\Chatbot\Weather2\models\current\nlu'
+2019-04-12 02:10:29 INFO     __main__  - Finished training
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_nlu.train -c nlu-config.yml --data nlu-data.md -o models --fixed_model_name nlu --project current --verbose
+2019-04-12 02:10:48 INFO     rasa_nlu.utils.spacy_utils  - Trying to load spacy model with name 'en'
+2019-04-12 02:11:15 INFO     rasa_nlu.components  - Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2019-04-12 02:11:16 INFO     rasa_nlu.training_data.loading  - Training data format of nlu-data.md is md
+2019-04-12 02:11:16 INFO     rasa_nlu.training_data.training_data  - Training data stats:
+        - intent examples: 9 (3 distinct intents)
+        - Found intents: 'inform', 'greet', 'goodbye'
+        - entity examples: 2 (1 distinct entities)
+        - found entities: 'location'
+
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component nlp_spacy
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component tokenizer_spacy
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component intent_entity_featurizer_regex
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component intent_featurizer_spacy
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component ner_crf
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component ner_spacy
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component ner_synonyms
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:16 INFO     rasa_nlu.model  - Starting to train component intent_classifier_sklearn
+Fitting 2 folds for each of 6 candidates, totalling 12 fits
+[Parallel(n_jobs=1)]: Using backend SequentialBackend with 1 concurrent workers.
+[Parallel(n_jobs=1)]: Done  12 out of  12 | elapsed:    0.0s finished
+2019-04-12 02:11:17 INFO     rasa_nlu.model  - Finished training component.
+2019-04-12 02:11:17 INFO     rasa_nlu.model  - Successfully saved model into 'C:\Users\Rohan Gore\Documents\Chatbot\Weather2\models\current\nlu'
+2019-04-12 02:11:17 INFO     __main__  - Finished training
+
+(rasabot) C:\Users\Rohan Gore\Documents\Chatbot\Weather2>python -m rasa_core.run --auth_token rasabot -d models\dialogue -u models\current\nlu -o out.log --endpoints endpoints.yml --enable_api
+2019-04-12 02:11:31 INFO     root  - Rasa process starting
+2019-04-12 02:11:58 INFO     rasa_nlu.components  - Added 'nlp_spacy' to component cache. Key 'nlp_spacy-en'.
+2019-04-12 02:12:09.907532: I tensorflow/core/platform/cpu_feature_guard.cc:141] Your CPU supports instructions that this TensorFlow binary was not compiled to use: AVX2
+2019-04-12 02:12:13 INFO     root  - Rasa Core server is up and running on http://localhost:5005
+Bot loaded. Type a message and press enter (use '/stop' to exit):
+Your input ->  hi
+Hi!
+127.0.0.1 - - [2019-04-12 02:12:18] "POST /webhooks/rest/webhook?stream=true&token= HTTP/1.1" 200 203 0.396613
+Your input ->  What's the weather in London today?
+It is currently Clear in London at the moment. The temperature is 7.0 degrees, the humidity is 61% and the wind speed is 11.9 mph.127.0.0.1 - - [2019-04-12 02:12:50] "POST /webhooks/rest/webhook?stream=true&token= HTTP/1.1" 200 330 3.025805

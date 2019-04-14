@@ -1,0 +1,81 @@
+%YAML 1.1
+---
+actions:
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_gains
+- utter_gains_up
+- utter_lose
+- utter_lose_up
+- utter_ask_location
+- action_weather
+- utter_its_nice_to_meet_you
+config:
+  store_entities_as_slots: true
+entities:
+- location
+forms: []
+intents:
+- greet:
+    use_entities: true
+- goodbye:
+    use_entities: true
+- mood_affirm:
+    use_entities: true
+- mood_deny:
+    use_entities: true
+- mood_great:
+    use_entities: true
+- mood_unhappy:
+    use_entities: true
+- gain:
+    use_entities: true
+- lose:
+    use_entities: true
+- inform:
+    use_entities: true
+- my_name_is:
+    use_entities: true
+slots:
+  PERSON:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+  location:
+    auto_fill: true
+    initial_value: null
+    type: rasa_core.slots.TextSlot
+templates:
+  utter_ask_location:
+  - text: In what location?.
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_gains:
+  - text: '- Priorities 1.Strength Train 2.Nutrition(Eat surplus calories) 3.Rest'
+  utter_gains_up:
+  - image: https://cdn2-thevladarcompany.netdna-ssl.com/wp-content/uploads/2017/12/kai-greene-back-and-traps-header-1068x566.jpg
+    text: Yeah buddy
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - text: Hey!What's your name?
+  utter_happy:
+  - text: Great carry on!
+  utter_its_nice_to_meet_you:
+  - buttons:
+    - payload: gains
+      title: gains
+    - payload: lose
+      title: lose
+    text: Whats your goal, {PERSON}
+  utter_lose:
+  - text: '- Priorities 1.Nutrition(Eat less calories) 2.Strength Train 3.Cardio'
+  utter_lose_up:
+  - image: https://yt3.ggpht.com/a-/AAuE7mCZLbzOC1VvzsHJdN0WpJNixtA2eV_oJhdQuw=s900-mo-c-c0xffffffff-rj-k-no
+    text: Comn brahh
