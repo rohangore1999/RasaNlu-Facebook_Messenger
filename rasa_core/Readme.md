@@ -49,3 +49,15 @@
      9. Fill the "Callback URL" by copying the port provide by ngrok and fill the "Verify Token" from your credential file.
      
      ![image](https://user-images.githubusercontent.com/39983195/56090203-a5cc4100-5ebc-11e9-83bc-a184b7d17241.png)
+     
+     10. If you are getting this message in command then congrats!! Your chatbot is ready....
+     
+     ![image](https://user-images.githubusercontent.com/39983195/56090407-8387f280-5ebf-11e9-9a89-e17871f9b5c6.png)
+     
+ 
+<p align="center">  
+  <br<
+  <b>This is how it will look</b><br>
+   <br>
+  <img src="https://user-images.githubusercontent.com/39983195/56090510-95b66080-5ec0-11e9-996c-3edf29ee8865.gif">
+</p>
