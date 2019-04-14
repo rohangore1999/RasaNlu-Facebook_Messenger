@@ -14,5 +14,5 @@
     4. To connect on Facebook
      - python -m rasa_core.run -d models/dialogue -u models/current/nlu --port 5002 --credentials credentials.yml --endpoints endpoints.yml  --enable_api --debug
      
-     * Note: It is updated comment compare to rasa docs. *
+     * Note: It is updated comment compare to rasa docs. * 
      
