@@ -6,7 +6,7 @@
     
     2. Adding Natural Language Understanding(Nlu to our bot)
          
-      python -m rasa_nlu.train -c nlu_config.yml --data nlu_data.md -o models --fixed_model_name nlu --project current --verbose
+      python -m rasa_nlu.train -c nlu_config.yml --data nlu.md -o models --fixed_model_name nlu --project current --verbose
     
     3. We can talk with our bot through command line just to check whether it is working or not.
         
